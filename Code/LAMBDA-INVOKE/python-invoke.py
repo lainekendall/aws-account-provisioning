@@ -3,8 +3,8 @@ import sys
 import boto3, json
 
 print('lambda invoke start')
-central_account_key = 'AKIAJVCUTFRXJGL44ITA'
-central_account_secret_key = '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'
+central_account_key = '*******************'
+central_account_secret_key = '**************************************'
 central_default_region = 'us-east-1'
 
 project_email_address = os.environ['LAMBDA_PROJ_EMAIL']

@@ -16,8 +16,8 @@ cloudtrail_global_dict = {'us-east-1': True, 'us-west-2': False, 'us-west-1': Fa
 ##############################################################################
 central_account_number = '00000000000'
 central_account_name = 'eis-aws-account-automation'
-central_account_key = 'AKIAJEMUZ33AYPHIJ37A'
-central_account_secret_key = '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'
+central_account_key = '*******************'
+central_account_secret_key = '**************************************'
 central_default_region = 'us-east-1'
 
 ## DDB tables ##
@@ -161,8 +161,8 @@ password = password_generator()
 ################ selenium must be done here ################################
 ################################################################################################
 ## get new access keys
-new_account_key = 'AKIAJN2ULCJCKKOVOYSQ'
-new_account_secret_key = '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'
+new_account_key = '**********************'
+new_account_secret_key = '********************************'
 
 #### CLIENTS ######
 client_iam_new = boto3.client('iam', aws_access_key_id=new_account_key, aws_secret_access_key=new_account_secret_key)

@@ -1,13 +1,13 @@
 import time, datetime, json, string, random, os, sys # python pre-installed packages
 import boto3, botocore # installed packages
 
-new_account_number = '713297355594'
+new_account_number = '0000000000000'
 project_email_address = 'aws.eis.testfour.tst@autodesk.com'
 new_role_name = 'PayerAccountAccessRole'
 
 
-payer_account_key = "AKIAIDIEEDJWZOQJ6O6Q"
-payer_account_secret_key = "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"
+payer_account_key = "***********************"
+payer_account_secret_key = "***************************"
 
 client_sts_payer = boto3.client('sts', aws_access_key_id=payer_account_key, aws_secret_access_key=payer_account_secret_key, region_name='us-east-1')
 

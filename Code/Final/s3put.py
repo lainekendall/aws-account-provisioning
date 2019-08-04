@@ -1,8 +1,8 @@
 import time, datetime, json, string, random, os, sys # python pre-installed packages
 import boto3 # installed packages
-central_account_number = '359896532639'
-central_account_key = 'AKIAJVCUTFRXJGL44ITA'
-central_account_secret_key = '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'
+central_account_number = '0000000000000'
+central_account_key = '*******************'
+central_account_secret_key = '**************************************'
 central_default_region = 'us-east-1'
 
 

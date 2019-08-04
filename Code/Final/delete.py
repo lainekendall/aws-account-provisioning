@@ -4,8 +4,8 @@ from selenium.webdriver.common.keys import Keys
 import final
 
 
-new_account_key = 'AKIAJN2ULCJCKKOVOYSQ'
-new_account_secret_key = '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'
+new_account_key = '**********************'
+new_account_secret_key = '********************************'
 client_iam_new = boto3.client('iam', aws_access_key_id=new_account_key, aws_secret_access_key=new_account_secret_key, region_name='us-east-1')
 
 def delete_credentials():
@@ -375,6 +375,6 @@ vpc_endpoint_policy = final.vpc_endpoint_policy
 
 
 
-new_account_key = 'AKIAJN2ULCJCKKOVOYSQ'
-new_account_secret_key = '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'
+new_account_key = '**********************'
+new_account_secret_key = '********************************'
 

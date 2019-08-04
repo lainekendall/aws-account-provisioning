@@ -7,7 +7,7 @@ state = 'California'
 postal_code = '94903'
 phone = '415-507-5000'
 
-credit_card_number = '4342562221502451'
+credit_card_number = '0000000000000'
 credit_card_name = 'Laine Kendall'
 expiration_month = 12
 expiration_year = 2017

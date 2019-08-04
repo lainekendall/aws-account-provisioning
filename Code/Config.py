@@ -18,7 +18,7 @@ config_recorder_name = 'nltest1configrec'
 config_role_name = 'intern-test-config-role'
 config_policy_name = 'Config-policy'
 central_account_number = '00000000000'
-new_account_number = '052362053110'                                                                                         
+new_account_number = '0000000000000'                                                                                         
 new_account_role = 'arn:aws:iam::' + new_account_number + ':role/' + config_role_name 
 
 

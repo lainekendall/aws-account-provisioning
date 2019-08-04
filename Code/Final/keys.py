@@ -4,12 +4,12 @@ import multiprocessing
 from multiprocessing import Process, Manager
 
 central_account_number = '00000000000'
-central_account_key = 'AKIAJEMUZ33AYPHIJ37A'
-central_account_secret_key = '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'
+central_account_key = '*******************'
+central_account_secret_key = '**************************************'
 central_default_region = 'us-east-1'
 
 new_role_name = 'intern-cross-create-linked'
-new_account_number = '052362053110'
+new_account_number = '0000000000000'
 client_sts = boto3.client('sts', aws_access_key_id=central_account_key, aws_secret_access_key=central_account_secret_key, region_name=central_default_region)
 
 def client_token_generator():

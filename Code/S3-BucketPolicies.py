@@ -86,15 +86,15 @@ initial_bucket_policy_cloudtrail = {
 			"Effect": "Allow",
 			"Principal": {
 				"AWS": [
-					"arn:aws:iam::903692715234:root",
-					"arn:aws:iam::035351147821:root",
-					"arn:aws:iam::859597730677:root",
-					"arn:aws:iam::814480443879:root",
-					"arn:aws:iam::216624486486:root",
-					"arn:aws:iam::086441151436:root",
-					"arn:aws:iam::388731089494:root",
-					"arn:aws:iam::284668455005:root",
-					"arn:aws:iam::113285607260:root"
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root"
 				]
 			},
 			"Action": "s3:GetBucketAcl",
@@ -105,19 +105,19 @@ initial_bucket_policy_cloudtrail = {
 			"Effect": "Allow",
 			"Principal": {
 				"AWS": [
-					"arn:aws:iam::903692715234:root",
-					"arn:aws:iam::035351147821:root",
-					"arn:aws:iam::859597730677:root",
-					"arn:aws:iam::814480443879:root",
-					"arn:aws:iam::216624486486:root",
-					"arn:aws:iam::086441151436:root",
-					"arn:aws:iam::388731089494:root",
-					"arn:aws:iam::284668455005:root",
-					"arn:aws:iam::113285607260:root"
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root"
 				]
 			},
 			"Action": "s3:PutObject",
-			"Resource": [	# this is where the folder in the bucket goes (looks like: "arn:aws:s3:::nltest1/AWSLogs/964355697993/*")
+			"Resource": [	# this is where the folder in the bucket goes (looks like: "arn:aws:s3:::nltest1/AWSLogs/************/*")
 							# new one will be added everytime a new account is created
 			],
 			"Condition": {

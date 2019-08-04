@@ -50,13 +50,13 @@ def test_assume_role():
 
 ######### 2: CENTRAL acount variables #########
 ##############################################################################
-central_account_number = '00000000000' # REAL: '359896532639'
-central_account_key = 'AKIAI52GD4Z6COWC7B5Q'
-central_account_secret_key = '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'
+central_account_number = '00000000000'
+central_account_key = '*******************'
+central_account_secret_key = '**************************************'
 central_default_region = 'us-east-1'
 
-payer_account_key = "AKIAIDIEEDJWZOQJ6O6Q"
-payer_account_secret_key = "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"
+payer_account_key = "***********************"
+payer_account_secret_key = "***************************"
 
 ## DDB tables ##
 
@@ -911,10 +911,10 @@ sns_config_initial_policy = {
         "SNS:Receive",
         "SNS:SetTopicAttributes"
       ],
-      "Resource": "arn:aws:sns:us-east-1:964355697993:intern-test-config-notifications",
+      "Resource": "arn:aws:sns:us-east-1:************:intern-test-config-notifications",
       "Condition": {
         "StringEquals": {
-          "AWS:SourceOwner": "964355697993"
+          "AWS:SourceOwner": "************"
         }
       }
     },
@@ -922,10 +922,10 @@ sns_config_initial_policy = {
       "Sid": "configPolicy",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::964355697993:root"
+        "AWS": "arn:aws:iam::************:root"
       },
       "Action": "SNS:Publish",
-      "Resource": "arn:aws:sns:*:964355697993:intern-test-config-notifications"
+      "Resource": "arn:aws:sns:*:************:intern-test-config-notifications"
     }
   ]
 }
@@ -938,15 +938,15 @@ initial_bucket_policy_cloudtrail = {
 			"Effect": "Allow",
 			"Principal": {
 				"AWS": [
-					"arn:aws:iam::903692715234:root",
-					"arn:aws:iam::035351147821:root",
-					"arn:aws:iam::859597730677:root",
-					"arn:aws:iam::814480443879:root",
-					"arn:aws:iam::216624486486:root",
-					"arn:aws:iam::086441151436:root",
-					"arn:aws:iam::388731089494:root",
-					"arn:aws:iam::284668455005:root",
-					"arn:aws:iam::113285607260:root"
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root"
 				]
 			},
 			"Action": "s3:GetBucketAcl",
@@ -957,19 +957,19 @@ initial_bucket_policy_cloudtrail = {
 			"Effect": "Allow",
 			"Principal": {
 				"AWS": [
-					"arn:aws:iam::903692715234:root",
-					"arn:aws:iam::035351147821:root",
-					"arn:aws:iam::859597730677:root",
-					"arn:aws:iam::814480443879:root",
-					"arn:aws:iam::216624486486:root",
-					"arn:aws:iam::086441151436:root",
-					"arn:aws:iam::388731089494:root",
-					"arn:aws:iam::284668455005:root",
-					"arn:aws:iam::113285607260:root"
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root",
+					"arn:aws:iam::************:root"
 				]
 			},
 			"Action": "s3:PutObject",
-			"Resource": [	# this is where the folder in the bucket goes (looks like: "arn:aws:s3:::nltest1/AWSLogs/964355697993/*")
+			"Resource": [	# this is where the folder in the bucket goes (looks like: "arn:aws:s3:::nltest1/AWSLogs/************/*")
 							# new one will be added everytime a new account is created
 			],
 			"Condition": {
@@ -1023,15 +1023,15 @@ cloudtrail_sns_topic_policy = {	# this says that cloudtrail service is allowed t
 		"Principal": {
    		    	
 			"AWS": [
-				"arn:aws:iam::086441151436:root",
-				"arn:aws:iam::113285607260:root",
-				"arn:aws:iam::388731089494:root",
-				"arn:aws:iam::284668455005:root",
-				"arn:aws:iam::903692715234:root",
-				"arn:aws:iam::216624486486:root",
-				"arn:aws:iam::859597730677:root",
-				"arn:aws:iam::814480443879:root",
-				"arn:aws:iam::035351147821:root"
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root",
+				"arn:aws:iam::************:root"
 				]  
 			},
 			"Action": "SNS:Publish",
@@ -1051,10 +1051,10 @@ config_sns_topic_policy = {			# this says that config is allowed to publish into
               # 'resource' here: its own topic arn
               "Principal": {
                 "AWS": [
-                  "arn:aws:iam::799199334739:root",
-                  "arn:aws:iam::197095836929:root",
-                  "arn:aws:iam::236577462850:root",
-                  "arn:aws:iam::056390219239:root"
+                  "arn:aws:iam::************:root",
+                  "arn:aws:iam::************:root",
+                  "arn:aws:iam::************:root",
+                  "arn:aws:iam::************:root"
                 ]
               }
             }
@@ -1068,7 +1068,7 @@ saml_assume_role_policy = {
       "Sid": "",
       "Effect": "Allow",
       "Principal": {
-        # "Federated": "arn:aws:iam::964355697993:saml-provider/intern-test-provider"
+        # "Federated": "arn:aws:iam::************:saml-provider/intern-test-provider"
       },
       "Action": "sts:AssumeRoleWithSAML",
       "Condition": {
@@ -1082,7 +1082,7 @@ saml_assume_role_policy = {
 
 initial_queue_policy = {
   "Version": "2008-10-17",
-  "Id": "arn:aws:sqs:us-east-1:964355697993:intern-cloudtrail/SQSDefaultPolicy",
+  "Id": "arn:aws:sqs:us-east-1:************:intern-cloudtrail/SQSDefaultPolicy",
   "Statement": [
     {
       "Sid": "Sid1385789515788",
@@ -1091,12 +1091,12 @@ initial_queue_policy = {
         "AWS": "*"
       },
       "Action": "SQS:SendMessage",
-      "Resource": "arn:aws:sqs:us-east-1:964355697993:intern-cloudtrail",
+      "Resource": "arn:aws:sqs:us-east-1:************:intern-cloudtrail",
       "Condition": {
         "ArnEquals": {
           "aws:SourceArn": [
-            "arn:aws:sns:*:163390070011:cloudtrail-notifications",
-            "arn:aws:sns:*:770858404452:cloudtrail-notifications"
+            "arn:aws:sns:*:************:cloudtrail-notifications",
+            "arn:aws:sns:*:************:cloudtrail-notifications"
           ]
         }
       }
@@ -1108,10 +1108,10 @@ initial_queue_policy = {
         "AWS": "*"
       },
       "Action": "SQS:SendMessage",
-      "Resource": "arn:aws:sqs:us-east-1:964355697993:intern-cloudtrail",
+      "Resource": "arn:aws:sqs:us-east-1:************:intern-cloudtrail",
       "Condition": {
         "ArnEquals": {
-          "aws:SourceArn": "arn:aws:sns:sa-east-1:503822575746:cloudtrail-notifications"
+          "aws:SourceArn": "arn:aws:sns:sa-east-1:************:cloudtrail-notifications"
         }
       }
     }
@@ -1179,7 +1179,7 @@ dummy_config_bucket_policy = {
       "Action": "s3:PutObject",
       "Resource": [
         "arn:aws:s3:::intern-test-config/AWSLogs/111111111111/*",
-        "arn:aws:s3:::intern-test-config/AWSLogs/964355697993/*"
+        "arn:aws:s3:::intern-test-config/AWSLogs/************/*"
       ],
       "Condition": {
         "StringEquals": {
@@ -1198,15 +1198,15 @@ dummy_cloudtrail_bucket_policy = {
       "Effect": "Allow",
       "Principal": {
         "AWS": [
-          "arn:aws:iam::903692715234:root",
-          "arn:aws:iam::035351147821:root",
-          "arn:aws:iam::859597730677:root",
-          "arn:aws:iam::814480443879:root",
-          "arn:aws:iam::216624486486:root",
-          "arn:aws:iam::086441151436:root",
-          "arn:aws:iam::388731089494:root",
-          "arn:aws:iam::284668455005:root",
-          "arn:aws:iam::113285607260:root"
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root"
         ]
       },
       "Action": "s3:GetBucketAcl",
@@ -1217,19 +1217,19 @@ dummy_cloudtrail_bucket_policy = {
       "Effect": "Allow",
       "Principal": {
         "AWS": [
-          "arn:aws:iam::903692715234:root",
-          "arn:aws:iam::035351147821:root",
-          "arn:aws:iam::859597730677:root",
-          "arn:aws:iam::814480443879:root",
-          "arn:aws:iam::216624486486:root",
-          "arn:aws:iam::086441151436:root",
-          "arn:aws:iam::388731089494:root",
-          "arn:aws:iam::284668455005:root",
-          "arn:aws:iam::113285607260:root"
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root",
+          "arn:aws:iam::************:root"
         ]
       },
       "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::intern-test-cloudtrail/AWSLogs/964355697993/*",
+      "Resource": "arn:aws:s3:::intern-test-cloudtrail/AWSLogs/************/*",
       "Condition": {
         "StringEquals": {
           "s3:x-amz-acl": "bucket-owner-full-control"
@@ -1260,10 +1260,10 @@ cfn_sns_topic_policy = {
         "SNS:Receive",
         "SNS:SetTopicAttributes"
       ],
-      # "Resource": "arn:aws:sns:us-west-1:052362053110:intern-test-stack", this is the topic arn in new account, in each region stacks are
+      # "Resource": "arn:aws:sns:us-west-1:************:intern-test-stack", this is the topic arn in new account, in each region stacks are
       "Condition": {
         "StringEquals": {
-          # "AWS:SourceOwner": "052362053110" new account number
+          # "AWS:SourceOwner": "************" new account number
         }
       }
     },
@@ -1271,13 +1271,13 @@ cfn_sns_topic_policy = {
       "Sid": "__console_sub_0",
       "Effect": "Allow",
       "Principal": {
-        # "AWS": "arn:aws:iam::964355697993:root" central account root arn
+        # "AWS": "arn:aws:iam::************:root" central account root arn
       },
       "Action": [
         "SNS:Subscribe",
         "SNS:Receive"
       ],
-      # "Resource": "arn:aws:sns:us-west-1:052362053110:intern-test-stack", # topic arn
+      # "Resource": "arn:aws:sns:us-west-1:************:intern-test-stack", # topic arn
       "Condition": {
         "StringEquals": {
           "SNS:Protocol": "lambda"

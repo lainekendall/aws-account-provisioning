@@ -1,6 +1,6 @@
 import boto3
-central_account_key = 'AKIAJEMUZ33AYPHIJ37A'
-central_account_secret_key = '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'
+central_account_key = '*******************'
+central_account_secret_key = '**************************************'
 central_default_region = 'us-east-1'
 
 client_lambda = boto3.client('lambda', aws_access_key_id=central_account_key, aws_secret_access_key=central_account_secret_key, region_name=central_default_region)

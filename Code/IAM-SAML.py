@@ -80,7 +80,7 @@ saml_assume_role_policy = {
       "Sid": "",
       "Effect": "Allow",
       "Principal": {
-        # "Federated": "arn:aws:iam::964355697993:saml-provider/intern-test-provider"
+        # "Federated": "arn:aws:iam::************:saml-provider/intern-test-provider"
       },
       "Action": "sts:AssumeRoleWithSAML",
       "Condition": {

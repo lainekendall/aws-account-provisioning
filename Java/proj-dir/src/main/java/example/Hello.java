@@ -110,8 +110,8 @@ public class Hello {
 		ClaRequest.setAddress(address);
 		ClaRequest.setEmail(request.projectEmailAddress); // get from DDB
 		//Remember that the service"s account needs permission to post to this topic
-		ClaRequest.setSnsArn("arn:aws:sns:us-east-1:359896532639:linkedaccountcreation-notifications");
-		//ClaRequest.setSnsArn("arn:aws:sns:us-east-1:964355697993:intern-create-linked");
+		ClaRequest.setSnsArn("arn:aws:sns:us-east-1:************:linkedaccountcreation-notifications");
+		//ClaRequest.setSnsArn("arn:aws:sns:us-east-1:************:intern-create-linked");
 		// ClaRequest.setRoleName("ROLE_NAME");
 
 		//And finally let"s make the call to the service.  This will throw

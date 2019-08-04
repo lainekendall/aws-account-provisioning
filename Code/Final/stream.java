@@ -1,6 +1,6 @@
 DescribeStreamResult describeStreamResult = 
     streamsClient.describeStream(new DescribeStreamRequest()
-        .withStreamArn("arn:aws:dynamodb:us-east-1:964355697993:table/intern-test-no-space-service-now/stream/2015-07-24T23:54:39.092"));
+        .withStreamArn("arn:aws:dynamodb:us-east-1:************:table/intern-test-no-space-service-now/stream/2015-07-24T23:54:39.092"));
 String streamArn = 
     describeStreamResult.getStreamDescription().getStreamArn();
 List<Shard> shards = 
@@ -14,7 +14,7 @@ List<Shard> shards =
     // Get an iterator for the current shard
 
     GetShardIteratorRequest getShardIteratorRequest = new GetShardIteratorRequest()
-        .withStreamArn("arn:aws:dynamodb:us-east-1:964355697993:table/intern-test-no-space-service-now/stream/2015-07-24T23:54:39.092")
+        .withStreamArn("arn:aws:dynamodb:us-east-1:************:table/intern-test-no-space-service-now/stream/2015-07-24T23:54:39.092")
         .withShardId(shardId)
         .withShardIteratorType(ShardIteratorType.TRIM_HORIZON);
     GetShardIteratorResult getShardIteratorResult = 
