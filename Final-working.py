@@ -50,7 +50,7 @@ def test_assume_role():
 
 ######### 2: CENTRAL acount variables #########
 ##############################################################################
-central_account_number = '964355697993' # REAL: '359896532639'
+central_account_number = '00000000000' # REAL: '359896532639'
 central_account_key = 'AKIAI52GD4Z6COWC7B5Q'
 central_account_secret_key = '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'
 central_default_region = 'us-east-1'

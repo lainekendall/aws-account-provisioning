@@ -14,7 +14,7 @@ cloudtrail_global_dict = {'us-east-1': True, 'us-west-2': False, 'us-west-1': Fa
 
 ######### all variables that will be given to us from CENTRAL acount #########
 ##############################################################################
-central_account_number = '964355697993'
+central_account_number = '00000000000'
 central_account_name = 'eis-aws-account-automation'
 central_account_key = 'AKIAJEMUZ33AYPHIJ37A'
 central_account_secret_key = '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'

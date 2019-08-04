@@ -4,7 +4,7 @@ central_account_key = 'AKIAIZPY3S3PSWSYC5EA'
 central_account_secret_key = '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'
 new_account_key = 'AKIAI6IOKMMJFAYYJ4CQ'
 new_account_secret_key = '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'
-central_account_number = '964355697993'
+central_account_number = '00000000000'
 new_account_number = '052362053110'
 
 # # everything SQS is done in central account in default region

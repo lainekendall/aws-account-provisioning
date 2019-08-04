@@ -3,7 +3,7 @@ import boto3, botocore # installed packages
 import multiprocessing
 from multiprocessing import Process, Manager
 
-central_account_number = '964355697993'
+central_account_number = '00000000000'
 central_account_key = 'AKIAJEMUZ33AYPHIJ37A'
 central_account_secret_key = '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'
 central_default_region = 'us-east-1'
