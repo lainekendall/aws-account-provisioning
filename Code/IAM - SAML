@@ -1,0 +1,86 @@
+import boto3, json
+
+#credentials
+central_account_key = '************************'
+central_account_secret_key = '*************************************'
+new_account_key = '************************'
+new_account_secret_key = '*********************************************'
+central_account_number = '00000000000000000'
+new_account_number = '000000000000000000'
+
+client_iam_new = boto3.client('iam', aws_access_key_id=new_account_key, aws_secret_access_key=new_account_secret_key)
+
+saml_provider_metadata = ''
+saml_provider_name =
+
+#grab metadata from the central account
+def saml_metadata():
+  client_iam_central = boto3.client('iam', aws_access_key_id=central_account_key, aws_secret_access_key=central_account_secret_key)
+  central_metadata = client_iam_central.get_saml_provider(
+      SAMLProviderArn='arn:aws:iam::0000000000000000:saml-provider/adsk-saml'
+  )
+  saml_provider_metadata = central_metadata['SAMLMetadataDocument']
+
+
+def create_saml_provider_and_role():
+  client_iam_new.create_saml_provider(
+      SAMLMetadataDocument=saml_provider_metadata,
+      Name=saml_provider_name
+  )
+
+  client_iam_new.create_role(Path='string',
+      RoleName=saml_role_name,
+      AssumeRolePolicyDocument=saml_assume_role_policy
+  )
+  client_iam_new.attach_role_policy(
+      RoleName=saml_role_name,
+      PolicyArn='string'
+  )
+
+saml_assume_role_policy = {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        # "Federated": "arn:aws:iam::0000000000000000:saml-provider/intern-test-provider"
+      },
+      "Action": "sts:AssumeRoleWithSAML",
+      "Condition": {
+        "StringEquals": {
+          "SAML:aud": "https://signin.aws.amazon.com/saml"
+        }
+      }
+    }
+  ]
+}
+
+saml_assume_role_policy["Principal"]["Federated"] = 'arn:aws:iam::' + new_account_number + ':saml-provider/' + saml_provider_name
+
+amazon_ec2_full_access_role_policy = {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "ec2:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "elasticloadbalancing:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "cloudwatch:*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "autoscaling:*",
+      "Resource": "*"
+    }
+  ]
+}
+

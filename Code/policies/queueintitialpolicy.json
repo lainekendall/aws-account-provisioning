@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Id": "arn:aws:sqs:us-east-1:964355697993:intern-test-queue/SQSDefaultPolicy",
+  "Statement": [
+    {
+      "Sid": "Sid1436826838613",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "SQS:SendMessage",
+      "Resource": "arn:aws:sqs:us-east-1:964355697993:intern-test-queue",
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": [
+          ]
+        }
+      }
+    }
+  ]
+}

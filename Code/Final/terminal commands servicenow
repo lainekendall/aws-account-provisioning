@@ -1,0 +1,8 @@
+aws s3 cp s3://nltest1/alan-put.py alan-put.py --region us-west-1
+python alan-put.py transid az long short env cc users defreg creator email dept mgmt AKIAJEMUZ33AYPHIJ37A qGKlewfsi9SudQyPVOCDxygilWNy46Uwd3/d6Moq
+
+
+curl -O https://s3-us-west-1.amazonaws.com/nltest1/alan-put.py
+
+
+from downloads: ssh -i service-now-mid-servercopy.pem ec2-user@54.88.140.253

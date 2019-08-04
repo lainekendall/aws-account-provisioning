@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    flatDir {
+       dirs 'src/main/java/example'
+   }
+}
+
+dependencies {
+    compile (
+        'com.amazonaws:aws-lambda-java-core:1.0.0',
+        'com.amazonaws:aws-lambda-java-events:1.0.0',
+        '.:AWSCreateLinkedAccountBetaSDK-20150722'
+    )
+}
+
+task buildZip(type: Zip) {
+    from compileJava
+    from processResources              
+    into('lib') {
+        from configurations.runtime
+    }           
+}
+
+build.dependsOn buildZip
